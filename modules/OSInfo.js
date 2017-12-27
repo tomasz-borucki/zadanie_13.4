@@ -1,3 +1,4 @@
+var os = require('os');
 var OSInfo = function getOSinfo() {
     var type = os.type();
     if(type === 'Darwin') {

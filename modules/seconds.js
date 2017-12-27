@@ -1,5 +1,5 @@
+var d = require('d');
 var seconds = function getSeconds(d) {
-    var d = Number(d);
     var h = Math.floor(d / 3600);
     var m = Math.floor(d % 3600 / 60);
     var s = Math.floor(d % 3600 % 60);
@@ -8,7 +8,6 @@ var seconds = function getSeconds(d) {
     var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
     var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
     return hDisplay + mDisplay + sDisplay; 
-    process.stdout.write(seconds(d));
 }
 
 exports.print = seconds;

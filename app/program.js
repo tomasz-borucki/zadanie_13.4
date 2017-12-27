@@ -14,14 +14,15 @@ process.stdin.on('readable', function() {
                 process.stdout.write('hello!\n'); 
                 break;
             case '/getOSinfo':
-                getOSinfo();
+                OSInfo.print();
                 break; 
             case '/seconds':
-                seconds();     
+                seconds.print();     
             default: 
                 process.stderr.write('Wrong instruction!\n');
         }
     }
 })
+
 
 
