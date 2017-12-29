@@ -1,13 +1,14 @@
-var d = require('d');
-var seconds = function getSeconds(d) {
-    var h = Math.floor(d / 3600);
-    var m = Math.floor(d % 3600 / 60);
-    var s = Math.floor(d % 3600 % 60);
+var os = require('os');
+var seconds = function getSeconds() {
+    var uptime = os.uptime();
+    var h = Math.floor(uptime / 3600);
+    var m = Math.floor(uptime % 3600 / 60);
+    var s = Math.floor(uptime % 3600 % 60);
 
     var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " hours, ") : "";
     var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
     var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
-    return hDisplay + mDisplay + sDisplay; 
+    console.log('Uptime: ' + hDisplay + mDisplay + sDisplay );
 }
 
 exports.print = seconds;

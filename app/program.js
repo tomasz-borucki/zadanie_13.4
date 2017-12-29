@@ -16,8 +16,9 @@ process.stdin.on('readable', function() {
             case '/getOSinfo':
                 OSInfo.print();
                 break; 
-            case '/seconds':
-                seconds.print();     
+            case '/getSeconds':
+                seconds.print();
+                break;     
             default: 
                 process.stderr.write('Wrong instruction!\n');
         }
