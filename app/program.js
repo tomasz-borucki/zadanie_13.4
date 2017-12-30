@@ -1,4 +1,3 @@
-var seconds = require('../modules/seconds');
 var OSInfo = require('../modules/OSInfo'); 
 process.stdin.setEncoding('utf-8');
 process.stdin.on('readable', function() {
@@ -15,10 +14,7 @@ process.stdin.on('readable', function() {
                 break;
             case '/getOSinfo':
                 OSInfo.print();
-                break; 
-            case '/getSeconds':
-                seconds.print();
-                break;     
+                break;    
             default: 
                 process.stderr.write('Wrong instruction!\n');
         }
