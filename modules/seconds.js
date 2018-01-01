@@ -1,4 +1,3 @@
-var os = require('os');
 var seconds = function getSeconds() {
     var uptime = os.uptime();
     var h = Math.floor(uptime / 3600);
