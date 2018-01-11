@@ -1,5 +1,8 @@
-var seconds = function getSeconds() {
+var os = require('os');
+var seconds = function getSeconds(uptime) {
     var uptime = os.uptime();
+    //console.log('Uptime: ~', seconds.print(uptime));
+
     var h = Math.floor(uptime / 3600);
     var m = Math.floor(uptime % 3600 / 60);
     var s = Math.floor(uptime % 3600 % 60);
@@ -11,3 +14,4 @@ var seconds = function getSeconds() {
 }
 
 exports.print = seconds;
+
